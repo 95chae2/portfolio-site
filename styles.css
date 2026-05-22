@@ -873,8 +873,10 @@ main {
   }
 
   .hero {
+    width: 100%;
     min-height: calc(100svh - 72px);
     padding-top: 50px;
+    padding-inline: 16px;
   }
 
   .hero h1 {
@@ -960,7 +962,7 @@ main {
 
   .about-profile {
     min-height: calc(100svh - 72px);
-    padding-top: 0;
+    padding-top: 24px;
   }
 
   .profile-copy {
