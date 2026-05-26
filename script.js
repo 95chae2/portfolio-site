@@ -4,6 +4,7 @@ const hero = document.querySelector(".hero");
 const youtubeWorkItems = document.querySelectorAll(".gallery-item[data-youtube]");
 const thumbnailImages = document.querySelectorAll(".work-art img");
 const profileImage = document.querySelector(".profile-image img");
+const homeBrandLink = document.querySelector('.brand[href="#top"]');
 
 function applyWorkFilter(activeFilter) {
   filterButtons.forEach((item) => {
@@ -75,6 +76,14 @@ thumbnailImages.forEach((image) => {
 if (profileImage) {
   profileImage.addEventListener("error", () => {
     profileImage.remove();
+  });
+}
+
+if (homeBrandLink) {
+  homeBrandLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    history.replaceState(null, "", window.location.pathname);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   });
 }
 
