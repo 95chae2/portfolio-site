@@ -4,7 +4,7 @@ const hero = document.querySelector(".hero");
 const youtubeWorkItems = document.querySelectorAll(".gallery-item[data-youtube]");
 const thumbnailImages = document.querySelectorAll(".work-art img");
 const profileImage = document.querySelector(".profile-image img");
-const homeBrandLink = document.querySelector('.brand[href="#top"]');
+const homeBrandLink = hero ? document.querySelector(".site-header .brand") : null;
 
 function applyWorkFilter(activeFilter) {
   filterButtons.forEach((item) => {
