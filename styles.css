@@ -875,7 +875,7 @@ main {
   .hero {
     width: 100%;
     min-height: calc(100svh - 72px);
-    padding-top: 50px;
+    padding-top: 26px;
     padding-inline: 16px;
   }
 

@@ -82,7 +82,7 @@ if (profileImage) {
 if (homeBrandLink) {
   homeBrandLink.addEventListener("click", (event) => {
     event.preventDefault();
-    history.replaceState(null, "", window.location.pathname);
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   });
 }
