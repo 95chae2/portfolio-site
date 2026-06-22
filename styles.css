@@ -756,12 +756,14 @@ main {
 }
 
 .gallery-item[data-youtube],
-.gallery-item[data-site-url] {
+.gallery-item[data-site-url],
+.gallery-item[href] {
   cursor: pointer;
 }
 
 .gallery-item[data-youtube]:focus-visible,
-.gallery-item[data-site-url]:focus-visible {
+.gallery-item[data-site-url]:focus-visible,
+.gallery-item[href]:focus-visible {
   outline: 1px solid var(--accent);
   outline-offset: 8px;
 }
@@ -769,7 +771,9 @@ main {
 .gallery-item[data-youtube]:hover .work-art,
 .gallery-item[data-youtube]:focus-visible .work-art,
 .gallery-item[data-site-url]:hover .work-art,
-.gallery-item[data-site-url]:focus-visible .work-art {
+.gallery-item[data-site-url]:focus-visible .work-art,
+.gallery-item[href]:hover .work-art,
+.gallery-item[href]:focus-visible .work-art {
   box-shadow: 0 0 0 1px rgba(182, 140, 255, 0.48), 0 24px 70px rgba(182, 140, 255, 0.16);
 }
 
