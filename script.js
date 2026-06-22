@@ -2,6 +2,7 @@ const filterButtons = document.querySelectorAll("[data-filter]");
 const galleryItems = document.querySelectorAll("[data-kind]");
 const hero = document.querySelector(".hero");
 const youtubeWorkItems = document.querySelectorAll(".gallery-item[data-youtube]");
+const siteWorkItems = document.querySelectorAll(".gallery-item[data-site-url]");
 const thumbnailImages = document.querySelectorAll(".work-art img");
 const profileImage = document.querySelector(".profile-image img");
 const homeBrandLink = hero ? document.querySelector(".site-header .brand") : null;
@@ -53,7 +54,7 @@ if (hero && window.matchMedia("(pointer: fine)").matches) {
 
 thumbnailImages.forEach((image) => {
   const setGifRatio = () => {
-    const gifArt = image.closest('.gallery-item[data-kind="gif"] .work-art');
+    const gifArt = image.closest('.gallery-item[data-kind="detail"] .work-art');
 
     if (!gifArt || !image.naturalWidth || !image.naturalHeight) {
       return;
@@ -103,6 +104,29 @@ youtubeWorkItems.forEach((item) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       openYoutubeVideo(item);
+    }
+  });
+});
+
+function openWebsite(item) {
+  const websiteUrl = item.dataset.siteUrl;
+
+  if (websiteUrl) {
+    window.open(websiteUrl, "_blank", "noopener,noreferrer");
+  }
+}
+
+siteWorkItems.forEach((item) => {
+  const title = item.querySelector("h2")?.textContent || "Detail page";
+
+  item.tabIndex = 0;
+  item.setAttribute("role", "link");
+  item.setAttribute("aria-label", `${title} website open`);
+  item.addEventListener("click", () => openWebsite(item));
+  item.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openWebsite(item);
     }
   });
 });

@@ -751,21 +751,25 @@ main {
   aspect-ratio: 16 / 9;
 }
 
-.gallery-item[data-kind="gif"] .work-art {
+.gallery-item[data-kind="detail"] .work-art {
   aspect-ratio: var(--gif-ratio, 9 / 16);
 }
 
-.gallery-item[data-youtube] {
+.gallery-item[data-youtube],
+.gallery-item[data-site-url] {
   cursor: pointer;
 }
 
-.gallery-item[data-youtube]:focus-visible {
+.gallery-item[data-youtube]:focus-visible,
+.gallery-item[data-site-url]:focus-visible {
   outline: 1px solid var(--accent);
   outline-offset: 8px;
 }
 
 .gallery-item[data-youtube]:hover .work-art,
-.gallery-item[data-youtube]:focus-visible .work-art {
+.gallery-item[data-youtube]:focus-visible .work-art,
+.gallery-item[data-site-url]:hover .work-art,
+.gallery-item[data-site-url]:focus-visible .work-art {
   box-shadow: 0 0 0 1px rgba(182, 140, 255, 0.48), 0 24px 70px rgba(182, 140, 255, 0.16);
 }
 
