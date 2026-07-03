@@ -117,7 +117,7 @@ main {
   overflow: hidden;
   width: 100%;
   min-height: max(548px, calc(100svh - 84px));
-  padding-top: 64px;
+  padding-top: 84px;
   padding-inline: max(32px, calc((100vw - var(--max)) / 2));
   --glow-x: 34%;
   --glow-y: 32%;
@@ -244,6 +244,7 @@ main {
   min-height: calc(100svh - 4px);
   scroll-margin-top: 84px;
   padding-top: 52px;
+  padding-bottom: 96px;
 }
 
 .section-heading p {
@@ -866,7 +867,7 @@ main {
 
   .selected-work {
     min-height: auto;
-    padding-bottom: 84px;
+    padding-bottom: 104px;
   }
 
   .about-inner {
@@ -901,7 +902,7 @@ main {
   .hero {
     width: 100%;
     min-height: calc(100svh - 72px);
-    padding-top: 26px;
+    padding-top: 44px;
     padding-inline: 16px;
   }
 
@@ -926,6 +927,7 @@ main {
   .selected-work {
     scroll-margin-top: 72px;
     padding-top: 20px;
+    padding-bottom: 72px;
   }
 
   .selected-grid,
