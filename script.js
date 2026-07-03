@@ -28,7 +28,11 @@ filterButtons.forEach((button) => {
 });
 
 if (filterButtons.length) {
-  const requestedFilter = window.location.hash.slice(1);
+  const filterAliases = {
+    viral: "viral-source",
+  };
+  const requestedHash = window.location.hash.slice(1);
+  const requestedFilter = filterAliases[requestedHash] || requestedHash;
   const availableFilters = [...filterButtons].map((button) => button.dataset.filter);
 
   if (availableFilters.includes(requestedFilter)) {
