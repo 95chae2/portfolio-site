@@ -267,7 +267,7 @@ main {
 }
 
 .selected-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 33px;
 }
 
@@ -753,6 +753,10 @@ main {
 .gallery-item[data-kind="youtube"] .work-art,
 .gallery-item[data-kind="motion"] .work-art {
   aspect-ratio: 16 / 9;
+}
+
+.gallery-item[data-kind="gfa"] .work-art {
+  aspect-ratio: 1;
 }
 
 .gallery-item[data-kind="detail"] .work-art {
