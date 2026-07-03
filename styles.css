@@ -757,6 +757,16 @@ main {
 
 .gallery-item[data-kind="gfa"] .work-art {
   aspect-ratio: 1;
+  background: #0f0f0f;
+}
+
+.gallery-item[data-kind="gfa"] .work-art::before,
+.gallery-item[data-kind="gfa"] .work-art::after {
+  display: none;
+}
+
+.gallery-item[data-kind="gfa"] .work-art img {
+  object-fit: contain;
 }
 
 .gallery-item[data-kind="detail"] .work-art {
